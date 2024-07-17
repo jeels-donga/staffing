@@ -21,6 +21,7 @@ import Team from '../Layout/Team/Team';
 import Blogs from '../Layout/Blogs/Blogs';
 import Faq from '../Layout/Faq/Faq';
 import LifeAtCrystal from '../Layout/LifeAtCrystal/LifeAtCrystal';
+import ContactUs from '../Layout/ContactUs/ContactUs';
 
 const Routers = () => {
     return (
