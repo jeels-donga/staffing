@@ -43,6 +43,7 @@ const Routers = () => {
                 <Route path="job" element={<Jobs />} />
                 <Route path="about-us" element={<AboutUs />} />
                 <Route path="about-us/team" element={<Team />} />
+                <Route path="contact-us" element={<ContactUs />} />
                 <Route path="blogs" element={<Blogs />} />
                 <Route path="blogs/faq" element={<Faq />} />
                 <Route path="life-at-crystal" element={<LifeAtCrystal />} />
