@@ -21,9 +21,10 @@ const Header = () => {
                 { name: "Contact Us", path: "/contact-us" },
                 { name: "Blogs", path: "/blogs" },
                 { name: "Life at Crystal", path: "/life-at-crystal" },
-            ].map((item) =>
+            ].map((item, index) =>
             (
                 < Typography
+                    key={index}
                     as="li"
                     variant="small"
                     color="gray"
