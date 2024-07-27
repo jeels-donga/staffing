@@ -48,8 +48,8 @@ const Home = () => {
                 <div className="bg-[url('https://91hr.in/wp-content/uploads/2022/11/recruitment_845x810.jpg')] h-[399px] opacity-40 bg-no-repeat bg-cover z-0">
                 </div>
 
-                <div className=' absolute container  top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] '>
-                    <Typography variant='h6' color='white' className=''>
+                <div className='absolute container top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center'>
+                    <Typography variant='h6' color='white'>
                         Looking for a job?
                     </Typography>
                     <Typography variant='h2' color='white' className='mt-5'>
@@ -61,7 +61,7 @@ const Home = () => {
                     <Typography variant='h5' color='white' className='mt-5 mb-3'>
                         Helping You Unleash Your True Potential
                     </Typography>
-                    <div className='flex gap-5 justify-center max-w-screen-sm'>
+                    <div className='flex flex-col gap-5 justify-center max-w-screen-sm mx-auto md:flex-row'>
                         <Input label='Job Title, Keywords, or Phrase' className='bg-white' />
                         <Input label='Location' className='bg-white' />
                         <Button>Find</Button>
@@ -118,42 +118,30 @@ const Home = () => {
                         CANDIDATES PLACED
                         20k
                     </Typography>
-                    <div className='grid grid-cols-1 md:grid-cols-3 bg-white border rounded'>
-                        <div className='grid grid-cols-2  p-[5%]'>
-                            <div className='flex justify-center self-center '>
-                                <Typography variant='h1' className='text-[#00495F]'>
-                                    75+
-                                </Typography>
-                            </div>
-                            <div className='flex justify-center self-center'>
-                                <Typography variant='h6'  >
-                                    CLIENTS SERVED
-                                </Typography>
-                            </div>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                        <div className='flex flex-col items-center p-10 bg-white rounded'>
+                            <Typography variant='h1' className='text-[#00495F]'>
+                                75+
+                            </Typography>
+                            <Typography variant='h6'>
+                                CLIENTS SERVED
+                            </Typography>
                         </div>
-                        <div className='grid grid-cols-2 border p-[5%]'>
-                            <div className='flex justify-center self-center'>
-                                <Typography variant='h1' className='text-[#00495F]'>
-                                    1500
-                                </Typography>
-                            </div>
-                            <div className='flex justify-center self-center'>
-                                <Typography variant='h6' >
-                                    CANDIDATES PLACED
-                                </Typography>
-                            </div>
+                        <div className='flex flex-col items-center p-10 bg-white rounded'>
+                            <Typography variant='h1' className='text-[#00495F]'>
+                                1500
+                            </Typography>
+                            <Typography variant='h6'>
+                                CANDIDATES PLACED
+                            </Typography>
                         </div>
-                        <div className='grid grid-cols-2 border p-[5%]'>
-                            <div className='flex justify-center self-center'>
-                                <Typography variant='h1' className='text-[#00495F]'>
-                                    20k
-                                </Typography>
-                            </div>
-                            <div className='flex justify-center self-center'>
-                                <Typography variant='h6' >
-                                    CANDIDATES DATA
-                                </Typography>
-                            </div>
+                        <div className='flex flex-col items-center p-10 bg-white rounded'>
+                            <Typography variant='h1' className='text-[#00495F]'>
+                                20k
+                            </Typography>
+                            <Typography variant='h6'>
+                                CANDIDATES DATA
+                            </Typography>
                         </div>
                     </div>
                 </div>
