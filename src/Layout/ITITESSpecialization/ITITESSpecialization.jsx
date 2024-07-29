@@ -2,7 +2,7 @@ import React from 'react'
 
 const ITITESSpecialization = () => {
     return (
-        <div>
+        <div className='container'>
             IT & ITES Specialization
             <p>The IT and ITES industries are characterized by continual evolution, rapid technological advancements, and the increasing complexity of digital services. They demand a workforce that is tech-savvy, innovative, and adaptable to changing landscapes. TekPillar is committed to delivering recruitment solutions that meet these dynamic needs.</p>
             <div className='flex '>

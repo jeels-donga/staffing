@@ -1,10 +1,49 @@
-import React from 'react'
+import { Avatar, Card, CardBody, CardHeader, Typography } from '@material-tailwind/react';
+import React, { useState } from 'react'
 
 const SoftwareService = () => {
     const categories = [
         "Product management", "Web UX & Design", "Software architecture", "E-commerce",
         "Operations", "Front-end development", "Back-end development", "Cloud & big data management", "Social software integration", "Search engine optimization"
     ];
+    const [activeCard, setActiveCard] = useState(0);
+    const [mainContent, setMainContent] = useState({
+        title: " End-to-end delivery",
+        description: "We have the capability to drive product delivery through all of its phases–elaboration, product requirements definition, UX design and development, deployment and operations support in production mode. However, our teams are flexible and are happy to meet clients needs at any or all of the required development stages.",
+        time: "Short-term"
+    });
+
+    const sideCards = [
+        {
+            title: " End-to-end delivery",
+            description: "We have the capability to drive product delivery through all of its phases–elaboration, product requirements definition, UX design and development, deployment and operations support in production mode. However, our teams are flexible and are happy to meet clients needs at any or all of the required development stages.",
+            time: "Short-term"
+        },
+        {
+            title: " Outstanding team",
+            description: "Our team is made up of not only highly talented and motivated individuals, but also innovators who live to solve real problems with great products."
+        },
+        {
+            title: "  Cutting edge technologies",
+            description: "We appreciate that technology changes on a daily basis and this is why we expend great effort to keep up-to-date with the most advanced, industry standard technologies out there.",
+            time: "As needed"
+        },
+        {
+            title: "   Alignment to client expectations",
+            description: "We completely understand the criticality of time-to-market and delivery cost and take these needs into account throughout our development process with constant client conversations.",
+            time: "As needed"
+        },
+        {
+            title: "       Holistic delivery process",
+            description: "Most of our projects leverage TekPillar Express an end-to-end delivery process that we developed in-house based on the industry best standards of agile development including Scrum, Kanban, Lean Development, Continuous Delivery and Total Quality Management.",
+            time: "As needed"
+        },
+    ];
+
+    const handleCardClick = (index) => {
+        setActiveCard(index);
+        setMainContent(sideCards[index]);
+    };
     return (
         <div className="container mx-auto p-4">
             <Typography variant="h2" className="text-center mb-8">
@@ -80,7 +119,48 @@ const SoftwareService = () => {
                 <Typography variant='paragraph'>
                     Our approach to successful delivery consists of several key elements:
                 </Typography>
-                <div className="flex">
+                <div className="flex flex-col md:flex-row gap-4 my-10 p-10 bg-gray-100">
+                    {/* Left column with cards */}
+                    <div className="flex flex-col gap-4 md:w-1/3">
+                        {sideCards.map((card, index) => (
+                            <Card
+                                key={index}
+                                className={`cursor-pointer transition-colors duration-300 ${activeCard === index ? 'bg-blue-600 text-white' : 'bg-white hover:bg-blue-50'
+                                    }`}
+                                onClick={() => handleCardClick(index)}
+                            >
+                                <CardBody>
+                                    <Typography variant="h6">
+                                        {card.title}
+                                    </Typography>
+                                </CardBody>
+                            </Card>
+                        ))}
+                    </div>
+
+                    {/* Right column with main content */}
+                    <Card className="md:w-2/3">
+                        <CardHeader color="blue-gray" className="relative h-56">
+                            <img
+                                src="https://4cbcd20a.rocketcdn.me/wp-content/uploads/2023/06/project-management-services-01.jpg"
+                                alt="Project requirements illustration"
+                                className="w-full h-full object-cover"
+                            />
+                        </CardHeader>
+                        <CardBody>
+                            <Typography variant="h5" color="blue-gray" className="mb-2">
+                                {mainContent.title}
+                            </Typography>
+                            <Typography className="mb-4">
+                                {mainContent.description}
+                            </Typography>
+                            <Typography variant="small" color="blue-gray" className="font-semibold">
+                                Time frame: {mainContent.time}
+                            </Typography>
+                        </CardBody>
+                    </Card>
+                </div>
+                {/* <div className="flex">
                     <div className="w-1/4 p-4">
                         <div className="flex flex-col space-y-4">
                             <Button color="blue" variant="filled" className="w-full text-left">
@@ -112,7 +192,7 @@ const SoftwareService = () => {
                             </CardBody>
                         </Card>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div>
                 <Typography>
