@@ -36,26 +36,29 @@ const RecruitmentService = () => {
         setActiveCard(index);
         setMainContent(sideCards[index]);
     };
+
     return (
         <div className="container mx-auto p-4">
-            <Typography variant="h2" className="text-center my-8">
-                Recruitment Services
-            </Typography>
-            <div className="flex justify-center mb-8">
-                <img
-                    src="https://4cbcd20a.rocketcdn.me/wp-content/uploads/2023/06/recruitment-services-01.jpg"
-                    className="w-1/2 h-auto"
-                    alt="Recruitment Services"
-                />
+            <div className='my-[5%]'>
+                <Typography variant="h2" className="text-center my-8">
+                    Recruitment Services
+                </Typography>
+                <div className="flex justify-center mb-8">
+                    <img
+                        src="https://4cbcd20a.rocketcdn.me/wp-content/uploads/2023/06/recruitment-services-01.jpg"
+                        className="w-full max-w-3xl h-auto rounded-lg shadow-md"
+                        alt="Recruitment Services"
+                    />
+                </div>
+                <Typography variant="body1" className="my-3 text-center">
+                    TekPillar is a pioneer in the IT Staff Augmentation industry. Since 2009, we’ve helped Fortune 500 and mid-size clients achieve their business goals by providing high-quality IT talent globally. We’re all about finding the right people, with the right skills, for the right job.
+                </Typography>
+                <Typography variant="body1" className="my-38 text-center">
+                    We bridge the IT talent demand-supply gap through an innovative, best-in-class recruiting engine, backed by a dedicated client-centric service focus. The result? Over 90% of our clients rank us in their top 3 suppliers by performance.
+                </Typography>
             </div>
-            <Typography variant="body1" className="my-4">
-                TekPillar is a pioneer in the IT Staff Augmentation industry. Since 2009, we’ve helped Fortune 500 and mid-size clients achieve their business goals by providing high-quality IT talent globally. We’re all about finding the right people, with the right skills, for the right job.
-            </Typography>
-            <Typography variant="body1" className="my-8">
-                We bridge the IT talent demand-supply gap through an innovative, best-in-class recruiting engine, backed by a dedicated client-centric service focus. The result? Over 90% of our clients rank us in their top 3 suppliers by performance.
-            </Typography>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-5">
-                <Card>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-[5%]">
+                <Card className="transition-transform transform hover:scale-105">
                     <CardBody>
                         <Typography variant="h6" color="blue-gray" className="mb-2">
                             01
@@ -72,7 +75,7 @@ const RecruitmentService = () => {
                         </div>
                     </CardBody>
                 </Card>
-                <Card>
+                <Card className="transition-transform transform hover:scale-105">
                     <CardBody>
                         <Typography variant="h6" color="blue-gray" className="mb-2">
                             02
@@ -89,7 +92,7 @@ const RecruitmentService = () => {
                         </div>
                     </CardBody>
                 </Card>
-                <Card>
+                <Card className="transition-transform transform hover:scale-105">
                     <CardBody>
                         <Typography variant="h6" color="blue-gray" className="mb-2">
                             03
@@ -107,20 +110,20 @@ const RecruitmentService = () => {
                     </CardBody>
                 </Card>
             </div>
-            <div>
-                <Typography className='h5'>
+            <div className='my-[5%]'>
+                <Typography variant='h4' className="text-center">
                     Finding You The Leaders Of Tomorrow
                 </Typography>
-                <Typography variant='paragraph'>
-                    Our contract staffing services enable you to fill short-term needs for qualified employees. Companies rely on a temporary staffing agency’s contract staffing services to support upcoming projects, meet seasonal requirements and reduce their workforce during slow periods.
+                <Typography variant="body1" className="text-center my-4">
+                    Our contract staffing services enable you to fill short-term needs for qualified employees. Companies rely on a temporary staffing agency’s contract staffing services to support upcoming projects, meet seasonal requirements, and reduce their workforce during slow periods.
                 </Typography>
-                <div className="flex flex-col md:flex-row gap-4 my-10 p-10 bg-gray-100">
+                <div className="flex flex-col md:flex-row gap-5 p-10 bg-gray-100 rounded-lg shadow-lg">
                     {/* Left column with cards */}
-                    <div className="flex flex-col gap-4 md:w-1/3">
+                    <div className="flex flex-col gap-3 md:w-1/3">
                         {sideCards.map((card, index) => (
                             <Card
                                 key={index}
-                                className={`cursor-pointer transition-colors duration-300 ${activeCard === index ? 'bg-blue-600 text-white' : 'bg-white hover:bg-blue-50'
+                                className={`cursor-pointer transition-transform transform hover:scale-105 duration-300 ${activeCard === index ? 'bg-blue-600 text-white' : 'bg-white hover:bg-blue-50'
                                     }`}
                                 onClick={() => handleCardClick(index)}
                             >
@@ -134,12 +137,12 @@ const RecruitmentService = () => {
                     </div>
 
                     {/* Right column with main content */}
-                    <Card className="md:w-2/3">
-                        <CardHeader color="blue-gray" className="relative h-56">
+                    <Card className="md:w-2/3 shadow-lg">
+                        <CardHeader className="relative h-56">
                             <img
                                 src="https://4cbcd20a.rocketcdn.me/wp-content/uploads/2023/06/project-management-services-01-600x400.jpg"
                                 alt="Project requirements illustration"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-t-lg"
                             />
                         </CardHeader>
                         <CardBody>
@@ -156,22 +159,19 @@ const RecruitmentService = () => {
                     </Card>
                 </div>
             </div>
-            <div>
-                <Typography>
+            <div className="my-[5%]">
+                <Typography variant='h4' className=" font-bold text-center mb-4">
                     Service Advantages
                 </Typography>
-                <Typography>
-                    With our proven 24/7 recruiting model, deep understanding of our client’s business areas, extensive resources and client-focused approach, TekPillar has developed strong focus teams to provide resources in various areas in the following Professional categories:
+                <Typography variant="body1" className="text-center mb-8">
+                    With our proven 24/7 recruiting model, deep understanding of our client’s business areas, extensive resources, and client-focused approach, TekPillar has developed strong focus teams to provide resources in various areas in the following Professional categories:
                 </Typography>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     {categories.map((category, index) => (
-                        <Card key={index} className="p-4 shadow-md bg-[#E0E6F3]">
-                            <CardBody>
-                                <div className="flex items-center space-x-2">
-                                    <i aria-hidden="true" class="fas fa-dot-circle"></i>
-                                    <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                                    <span>{category}</span>
-                                </div>
+                        <Card key={index} className="p-4 shadow-md bg-[#E0E6F3] hover:bg-[#D0D8E8] transition-colors duration-300">
+                            <CardBody className="flex items-center">
+                                <i className="fas fa-dot-circle text-blue-500 mr-2" aria-hidden="true"></i>
+                                <Typography variant="body1">{category}</Typography>
                             </CardBody>
                         </Card>
                     ))}
