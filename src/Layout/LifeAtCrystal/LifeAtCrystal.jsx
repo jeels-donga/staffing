@@ -1,5 +1,4 @@
 import { Card, CardFooter, Typography } from '@material-tailwind/react'
-import React from 'react'
 
 const LifeAtCrystal = () => {
     return (

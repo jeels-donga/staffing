@@ -1,7 +1,5 @@
 import { Button, Card, CardBody, CardFooter, CardHeader, Checkbox, Chip, Input, Option, Select, Typography } from '@material-tailwind/react'
-import React from 'react'
 import { BiSolidHeartCircle } from 'react-icons/bi'
-import { IoSearch } from 'react-icons/io5'
 
 const Jobs = () => {
     const cardDetails = [
